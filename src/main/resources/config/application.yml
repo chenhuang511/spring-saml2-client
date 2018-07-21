@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: sds-bsr-sso
+server:
+  port: 9443
+  session:
+    timeout: 3600
+  ssl:
+    key-store: classpath:bsrsso.p12
+    key-store-type: PKCS12
+    key-store-password: 123456
+    key-alias: bsrsso.softdreams.vn
+logging:
+  level:
+    vn.softdreams.springsaml: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
